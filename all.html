@@ -14,6 +14,14 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
+        .text-white {
+            color: white; /* assuming you already have other styles */
+            text-align: center; /* adds center alignment to the text */
+        }       
+        .description {
+            margin-top: 20px;
+            color: white;
+        }
         .container {
             padding-top: 100px; /* Space for the fixed navbar */
         }
@@ -31,12 +39,14 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="covid_1.html">Covid Cases per Country</a>
+                <a class="nav-item nav-link" href="viz1.html">Covid Cases Distribution by Continent</a>
+                <a class="nav-item nav-link" href="viz2.html">Life Expectancy by Continent</a>
                 <a class="nav-item nav-link" href="covid_2.html">Daily Covid Cases</a>
                 <a class="nav-item nav-link" href="covid_3.html">Daily Covid Deaths</a>
                 <a class="nav-item nav-link" href="covid_4.html">Stringency Index</a>
-                <a class="nav-item nav-link" href="car_1.html">Accident Severity by Vehicle Type</a>
-                <a class="nav-item nav-link" href="car_2.html">Casualties by Location</a>
-                <a class="nav-item nav-link" href="air_1.html">Timeline of Airplane Fatalities</a>
+                <a class="nav-item nav-link" href="car_1.html">Accident type vs Vehicle type</a>
+                <a class="nav-item nav-link" href="car_2.html">Casualties per Location</a>
+                <a class="nav-item nav-link" href="air_1.html">Air Fatalities per Day</a>
                 <a class="nav-item nav-link" href="air_2.html">Air Fatalities per Location</a>
                 <a class="nav-item nav-link active" href="all.html">Accidents vs Covid Rate</a>
                 <a class="nav-item nav-link" href="two.html">Stringency Index vs Accident Rate</a>
@@ -44,8 +54,8 @@
         </div>
     </nav>
 
-    <div class="container">
-        <!-- Updated Tableau Visualization Embed Code -->
+    <div class="container mt-5">
+        <h1 class="text-white">No.of Accidents vs Covid positive rate </h1>
         <div class='tableauPlaceholder' id='viz1713862030877' style='position: relative'>
             <noscript>
                 <a href='#'><img alt='Accidents vs Covid Cases' src='https://public.tableau.com/static/images/Ac/AccidentsvsCovidCases/AccidentsvsCovidCases/1_rss.png' style='border: none'/></a>
@@ -74,6 +84,9 @@
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
         </script>
+        <div class="description">
+            <p>This visualization is a multi bar chart where each color represents a number from each dataset. The purple color represents the number of causalities in road accidents, blue color represents the number of fatalities in airplane crashes and the orange color represents the number of new covid cases. This graph is necessary to compare the correlation between number of new covid cases and number of deaths due to road and plane accidents. For each month, we can observe the trend and gain insights. Here the values are fluctuating and no particular pattern can be observed in the timeline we have. By hovering over the graph, we can get the exact numbers.</p>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

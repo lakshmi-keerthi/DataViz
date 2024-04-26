@@ -17,6 +17,14 @@
         .container {
             padding-top: 100px; /* Space for the fixed navbar */
         }
+        .text-white {
+            color: white; /* assuming you already have other styles */
+            text-align: center; /* adds center alignment to the text */
+        }       
+        .description {
+            margin-top: 20px;
+            color: white;
+        }
         .navbar {
             z-index: 1000; /* Ensures the navbar is always on top */
         }
@@ -31,21 +39,23 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="covid_1.html">Covid Cases per Country</a>
+                <a class="nav-item nav-link" href="viz1.html">Covid Cases Distribution by Continent</a>
+                <a class="nav-item nav-link" href="viz2.html">Life Expectancy by Continent</a>
                 <a class="nav-item nav-link" href="covid_2.html">Daily Covid Cases</a>
                 <a class="nav-item nav-link" href="covid_3.html">Daily Covid Deaths</a>
                 <a class="nav-item nav-link" href="covid_4.html">Stringency Index</a>
-                <a class="nav-item nav-link" href="car_1.html">Accident Severity by Vehicle Type</a>
-                <a class="nav-item nav-link" href="car_2.html">Casualties by Location</a>
-                <a class="nav-item nav-link" href="air_1.html">Timeline of Airplane Fatalities</a>
+                <a class="nav-item nav-link" href="car_1.html">Accident type vs Vehicle type</a>
+                <a class="nav-item nav-link" href="car_2.html">Casualties per Location</a>
+                <a class="nav-item nav-link" href="air_1.html">Air Fatalities per Day</a>
                 <a class="nav-item nav-link" href="air_2.html">Air Fatalities per Location</a>
                 <a class="nav-item nav-link" href="all.html">Accidents vs Covid Rate</a>
-                <a class="nav-item nav-link active" href="two.html">Stringency Index vs Accident Casualties</a>
+                <a class="nav-item nav-link active" href="two.html">Stringency Index vs Accident Rate</a>
             </div>
         </div>
     </nav>
 
-    <div class="container">
-        <!-- Updated Tableau Visualization Embed Code -->
+    <div class="container mt-5">
+        <h1 class="text-white">Stringency Index vs Number of Accidents</h1>
         <div class='tableauPlaceholder' id='viz1713862397304' style='position: relative'>
             <noscript>
                 <a href='#'><img alt='Stringency Index vs Accident Casualities' src='https://public.tableau.com/static/images/St/StringencyIndexvsAccidentCasualities/StringencyIndexvsAccidentCasualities/1_rss.png' style='border: none'/></a>
@@ -75,6 +85,10 @@
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
         </script>
+        <div class="description">
+            <p>This graph is multi line graph where each color represents a number or trend. Blue color represents the number of causalities and purple color represents the stringency index. Using this we can observe whether there is any correlation between stringency index and the number of causalities.  We do not observe any particular pattern but at some places we can see that when the strigency index is dropped the number of causalities dropped.
+            </p>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
